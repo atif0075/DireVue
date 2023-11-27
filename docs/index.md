@@ -5,15 +5,15 @@ layout: home
 hero:
   name: "DireVue"
   text: "Your Go-To Toolkit of Vue Directives"
-  tagline: "A collection of Vue directives to help you build your next Vue app faster <span class='scratch'>speed and performance</span>"
+  tagline: "A collection of Vue directives to help you build your next Vue app faster"
   image: https://gist.githubusercontent.com/atif0075/7a7cda43c49481bc7141d4e7224579f6/raw/6a1701b9a0bda46fcc7405c7b4a1b701aa3b6ee8/direvue.svg
   actions:
     - theme: brand
       text: Explore
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      link: /guide/introduction
+    # - theme: alt
+    #   text: API Examples
+    #   link: /api-examples
 
 features:
   - title: Feature A
