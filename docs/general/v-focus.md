@@ -8,6 +8,22 @@ The `v-focus` directive is used to automatically focus an input element when the
 <input v-focus />
 ```
 
+```js
+  mounted(el, binding) {
+    if (binding.value) {
+      el.focus();
+    }
+    // lock focus to the element
+    else if (binding.value === "lock") {
+      el.onblur = () => el.focus();
+    }
+    // on certain condition, focus the element
+    else if (binding.value) {
+      el.focus();
+    }
+  },
+```
+
 ## Arguments
 
 The `v-focus` directive does not accept any arguments.
@@ -41,9 +57,9 @@ import { ref } from "vue";
 const showInput = ref(false);
 
 // ...
-
 </script>
 ```
 
 ### Code
+
 <<< ../../code/general/v-focus.js
