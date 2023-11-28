@@ -1,8 +1,26 @@
 {
   "name": "direvue",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.1.0",
   "type": "module",
+  "main": "./dist/direvue.umd.js",
+  "module": "./dist/direvue.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/direvue.es.js",
+      "require": "./dist/direvue.umd.js"
+    },
+    "./package.json": "./package.json",
+    "./dist/*": "./dist/*"
+  },
+  "homepage": "https://direvue.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atif0075/direvue"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
