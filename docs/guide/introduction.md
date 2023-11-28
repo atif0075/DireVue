@@ -24,31 +24,6 @@ DireVue is more than just a library; it's your toolkit for accelerating Vue.js a
 
 - **Community-Driven:** Built with input from the Vue.js community, DireVue is continually evolving to meet the ever-changing needs of Vue developers worldwide.
 
-## Getting Started
-
-1. Install DireVue in your Vue 3 project:
-
-   ```bash
-   npm install direvue
-   ```
-
-2. Import and use directives in your components:
-
-   ```javascript
-   import { vClickOutside, vScrollClass /* ... */ } from "direvue";
-
-   export default {
-     directives: {
-       "click-outside": vClickOutside,
-       "scroll-class": vScrollClass,
-       // Add other directives as needed
-     },
-     // Your component code...
-   };
-   ```
-
-3. Explore the documentation for each directive to unlock its full potential.
-
 ## Ready to Dive In?
 
 DireVue is here to streamline your Vue.js development process. Let the directives handle the heavy lifting, so you can focus on creating exceptional user experiences.
