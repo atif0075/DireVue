@@ -27,7 +27,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: "Focus", link: "/general/v-focus" },
-          { text: "Click OutSide", link: "/general/v-click-outside" },
+          { text: "Click Outside", link: "/general/v-click-outside" },
           { text: "Copy", link: "/general/v-copy" },
         ],
       },

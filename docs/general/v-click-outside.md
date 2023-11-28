@@ -1,3 +1,7 @@
+<script setup> 
+import ClickOutside from "../../src/examples/general/ClickOutside.vue"
+</script>
+
 # Click-Outside Directive
 
 The `v-click-outside` directive is used to detect clicks outside of an element. It is useful for closing dropdowns, modals, and other components that require a click outside to close.
@@ -10,6 +14,14 @@ The `v-click-outside` directive is used to detect clicks outside of an element. 
 </div>
 ```
 
+<div class="w-full h-auto py-5 flex flex-col ">
+<ClickOutside />
+</div>
+
+::: details View Code
+<<< ../../src/examples/general/ClickOutside.vue
+:::
+
 ## Arguments
 
 The `v-click-outside` directive does not accept any arguments.
@@ -18,32 +30,6 @@ The `v-click-outside` directive does not accept any arguments.
 
 The `v-click-outside` directive does not accept any modifiers.
 
-## Examples
-
-### Basic Example
-
-```vue
-<template>
-  <div v-click-outside="onClickOutside">
-    <button @click="showDropdown = !showDropdown">Toggle Dropdown</button>
-    <ul v-if="showDropdown">
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-    </ul>
-  </div>
-</template>
-
-<script setup>
-import { ref } from "vue";
-const showDropdown = ref(false);
-
-const onClickOutside = () => {
-  showDropdown.value = false;
-};
-</script>
-```
-
-### Code
+## Source Code
 
 <<< ../../code/general/v-click-outside.js

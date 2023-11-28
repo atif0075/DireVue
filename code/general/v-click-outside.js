@@ -1,15 +1,41 @@
 export const vClickOutside = {
   beforeMount(el, binding) {
     el.clickOutsideEvent = function (event) {
-      // here I check that click was outside the el and his childrens
-      if (!(el === event.target || el.contains(event.target))) {
-        // and if it did, call method provided in attribute value
-        binding.value(event);
+      const isTouch = event.type === "touchstart";
+      const isClickOutside = !(
+        el === event.target || el.contains(event.target)
+      );
+
+      if (isTouch || isClickOutside) {
+        if (binding.value) {
+          let shouldTrigger = true;
+
+          // Check for modifiers
+          if (binding.modifiers) {
+            if (binding.modifiers.enter && !event.key === "Enter") {
+              shouldTrigger = false;
+            }
+            // Add more modifiers as needed
+          }
+
+          // Check for a custom filter function
+          if (typeof binding.value === "function" && !binding.value(event)) {
+            shouldTrigger = false;
+          }
+
+          if (shouldTrigger) {
+            binding.value(event);
+          }
+        }
       }
     };
-    document.addEventListener("click", el.clickOutsideEvent);
+
+    // Use capturing phase to handle events before they reach other elements
+    document.addEventListener("click", el.clickOutsideEvent, true);
+    document.addEventListener("touchstart", el.clickOutsideEvent, true);
   },
   unmounted(el) {
-    document.removeEventListener("click", el.clickOutsideEvent);
+    document.removeEventListener("click", el.clickOutsideEvent, true);
+    document.removeEventListener("touchstart", el.clickOutsideEvent, true);
   },
 };

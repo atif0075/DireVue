@@ -1,6 +1,5 @@
-<script setup>
-import vFocus from "../../src/examples/general/v-focus.vue"
-import ConditionaFocus from "../../src/examples/general/Focus/ConditionaFocus.vue"
+<script setup> 
+import ConditionalFocus from "../../src/examples/general/ConditionalFocus.vue"
 </script>
 
 # Focus Directive
@@ -48,11 +47,11 @@ The `v-focus:lockonFocus` directive is used to lock the focus to an element when
 The `v-focus` directive can be used to conditionally focus an element. This is useful when you want to focus an element only when a certain condition is met.
 
 <div class="w-full h-auto py-5 flex flex-col ">
-<ConditionaFocus />
+<ConditionalFocus />
 </div>
 
 ::: details View Code
-<<< ../../src/examples/general/Focus/ConditionaFocus.vue
+<<< ../../src/examples/general/ConditionalFocus.vue
 :::
 
 ## Arguments
