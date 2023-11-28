@@ -49,7 +49,4 @@ features:
   }
 }
 
-  
-
-
 </style>

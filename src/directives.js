@@ -1,4 +1,4 @@
-import { vFocus } from "/code/general/v-focus";
+import { vFocus } from "../code/general/v-focus";
 
 export default {
   install: (app) => {

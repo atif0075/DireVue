@@ -1,28 +1,28 @@
 export const vFocus = {
   mounted(el, binding) {
-    if (binding.value) {
-      el.focus();
-    }
-    // lock focus to the element
-    else if (binding.value === "lock") {
-      el.onblur = () => el.focus();
-    }
-    // on certain condition, focus the element
-    else if (binding.value) {
-      el.focus();
-    }
+    handleFocus(el, binding);
   },
   updated(el, binding) {
-    if (binding.value) {
-      el.focus();
-    }
-    // lock focus to the element
-    else if (binding.value === "lock") {
-      el.onblur = () => el.focus();
-    }
-    // on certain condition, focus the element
-    else if (binding.value) {
-      el.focus();
-    }
+    handleFocus(el, binding);
   },
 };
+
+function handleFocus(el, binding) {
+  if (binding.arg === "lockonFocus") {
+    el.onblur = () => el.focus();
+  } else if (binding.arg === "lock") {
+    el.focus();
+    el.onblur = () => el.focus();
+  } else if (binding.arg === "lockonCondition") {
+    if (binding.value) {
+      el.focus();
+      el.onblur = () => el.focus();
+    } else {
+      // remove the event handler when the binding value changes
+      el.onblur = null;
+      el.blur();
+    }
+  } else {
+    el.focus();
+  }
+}
