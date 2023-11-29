@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-white dark:bg-zinc-800 rounded-3xl p-5">
+  <div class="w-full bg-gray-50 dark:bg-zinc-800 rounded-3xl p-5">
     <textarea
       v-model="text"
       class="w-full p-2 resize-none h-24 rounded-2xl bg-zinc-100 dark:bg-zinc-700"
