@@ -8,6 +8,28 @@ DireVue is a comprehensive collection of Vue directives designed to enhance your
 
 Vue directives are special tokens in the markup that tell the library to do something to a DOM element. They are a powerful tool for adding behavior to your components without cluttering your templates with unnecessary code.
 
+## Getting Started
+
+1. Install DireVue in your Vue 3 project:
+
+```bash
+npm install direvue
+```
+
+2. Import and use directives in your components:
+
+```javascript
+import { createApp } from "vue";
+import "./style.css";
+import App from "./App.vue";
+
+import direvue from "direvue";
+
+createApp(App).use(direvue).mount("#app");
+```
+
+3. Explore the [documentation](https://direvue.vercel.app) for each directive to unlock its full potential.
+
 ## Your Swiss Army Knife for Vue Development
 
 ### Motive: A Faster Vue App Development
