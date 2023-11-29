@@ -31,7 +31,7 @@ export default defineConfig({
           { text: "Click Outside", link: "/general/v-click-outside" },
           { text: "Copy", link: "/general/v-copy" },
           { text: "Disable", link: "/general/v-disable" },
-          { text: "Scroll To", link: "/general/v-scroll-to-view" },
+          { text: "Scroll To View", link: "/general/v-scroll-to-view" },
         ],
       },
     ],
