@@ -16,12 +16,15 @@ hero:
     #   link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: 🧰
+    title: Versatility
+    details: DireVue offers a diverse set of directives, from simple utility directives to complex interactive behaviors. Whatever your project demands, DireVue has you covered.
+  - icon: 📚
+    title: Documentation
+    details: Each directive comes with detailed documentation and examples, making it easy for you to integrate and customize them in your Vue applications.
+  - icon: ⚡️
+    title: Lightweight
+    details: DireVue is designed to be lightweight, ensuring that you only include the directives you need without unnecessary bloat.
 ---
 
 <style>
