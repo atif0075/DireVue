@@ -33,6 +33,7 @@ export default defineConfig({
           { text: "Disable", link: "/general/v-disable" },
           { text: "Scroll To View", link: "/general/v-scroll-to-view" },
           { text: "Tooltip", link: "/general/v-tooltip" },
+          { text: "Ripple", link: "/general/v-ripple" },
         ],
       },
     ],
