@@ -28,17 +28,45 @@ features:
 ---
 
 <style>
-:root {
-  --main-color: #3d63dc;
-  --lighter-color: #7899ed; /* Lighter version of main color */
-  --darker-color: #1f389e; /* Darker version of main color */
-
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, var(--darker-color) 30%, var(--lighter-color));
-
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, var(--darker-color) 50%, var(--lighter-color) 50%);
-  --vp-home-hero-image-filter: blur(40px);
+:root { 
+  --vp-home-hero-name-background: linear-gradient(
+    30deg,
+    #5073e0 0%,
+    #8ba1ea 80%
+  );
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #5073e0 50%,
+    #8ba1ea 50%
+  );
+  --vp-home-hero-image-filter: blur(20px);
+}  
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px);
+  }
 }
+@media (min-width: 768px) {
+  :root {
+    --vp-home-hero-image-filter: blur(72px);
+  }
+} 
+
+/* Dark Mode */
+html.dark { 
+  --vp-home-hero-name-background: linear-gradient(
+    30deg,
+    #121e42 0%, /* Darker blue shade */
+    #667eea 80%
+  );
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #121e42 50%, /* Darker blue shade */
+    #1f326e 50%
+  );
+}
+
+
 
 @media (min-width: 640px) {
   :root {
@@ -46,10 +74,5 @@ features:
   }
 }
 
-@media (min-width: 960px) {
-  :root {
-    --vp-home-hero-image-filter: blur(72px);
-  }
-}
-
+ 
 </style>
