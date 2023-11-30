@@ -15,7 +15,7 @@ const count = ref(0);
             type="number"
             v-focus:lockonCondition="count % 2 === 1"
             v-model="count"
-            class="p-2 border w-full max-w-xs rounded-lg focus:outline-none ring-2 focus:ring-blue-600 focus:border-transparent"
+            class="p-2 color-pink border w-full max-w-xs rounded-lg focus:outline-none ring-2 focus:ring-blue-600 focus:border-transparent"
             :placeholder="count % 2 === 1 ? 'Focus' : 'Not Focus'"
           />
         </div>
