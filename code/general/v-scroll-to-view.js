@@ -1,4 +1,4 @@
-export const scrollToView = {
+export const vScrollToView = {
   mounted(el, binding) {
     el.addEventListener("click", () => {
       handleScroll(binding.value);
