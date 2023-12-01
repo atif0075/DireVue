@@ -7,6 +7,7 @@ import { vToolTip } from "../code/general/v-tooltip";
 import { vRipple } from "../code/general/v-ripple";
 import { vHighlight } from "../code/general/v-highlight";
 import { vImageView } from "../code/image/v-image-view";
+import { vImageFilter } from "../code/image/v-image-filter";
 export default {
   install: (app) => {
     app
@@ -18,6 +19,7 @@ export default {
       .directive("tooltip", vToolTip)
       .directive("ripple", vRipple)
       .directive("highlight", vHighlight)
-      .directive("image-view", vImageView);
+      .directive("image-view", vImageView)
+      .directive("image-filter", vImageFilter);
   },
 };

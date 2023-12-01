@@ -1,5 +1,5 @@
 <script setup> 
-import ImageViewer from "../../src/examples/general/ImageView.vue"
+import ImageViewer from "../../src/examples/image/ImageView.vue"
 </script>
 
 # Image Viewer Directive
@@ -11,7 +11,7 @@ The `v-image-viewer` component is used to display images with optional thumbnail
 <ImageViewer/>
 
 ::: details View Code
-<<< ../../src/examples/general/ImageView.vue
+<<< ../../src/examples/image/ImageView.vue
 :::
 
 ## Arguments
