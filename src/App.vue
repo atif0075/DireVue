@@ -1,7 +1,7 @@
 <script setup>
-import ImageGallery from "./examples/image/ImageGallery.vue";
+import ImageZoom from "./examples/image/ImageZoom.vue";
 </script>
 
 <template>
-  <ImageGallery />
+  <ImageZoom />
 </template>
