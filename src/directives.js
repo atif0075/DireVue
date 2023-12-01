@@ -8,6 +8,7 @@ import { vRipple } from "../code/general/v-ripple";
 import { vHighlight } from "../code/general/v-highlight";
 import { vImageView } from "../code/image/v-image-view";
 import { vImageFilter } from "../code/image/v-image-filter";
+import { vImageGallery } from "../code/image/v-image-gallery";
 export default {
   install: (app) => {
     app
@@ -20,6 +21,7 @@ export default {
       .directive("ripple", vRipple)
       .directive("highlight", vHighlight)
       .directive("image-view", vImageView)
-      .directive("image-filter", vImageFilter);
+      .directive("image-filter", vImageFilter)
+      .directive("image-gallery", vImageGallery);
   },
 };

@@ -43,6 +43,7 @@ export default defineConfig({
         items: [
           { text: "Image View", link: "/image/v-image-view" },
           { text: "Image Filter", link: "/image/v-image-filter" },
+          { text: "Image Gallery", link: "/image/v-image-gallery" },
           // { text: "Image Zoom", link: "/image/v-image-zoom" },
           // { text: "Image Preview", link: "/image/v-image-preview" },
         ],

@@ -1,7 +1,7 @@
 <script setup>
-import ImageFilter from "./examples/image/ImageFilter.vue";
+import ImageGallery from "./examples/image/ImageGallery.vue";
 </script>
 
 <template>
-  <ImageFilter  />
+  <ImageGallery />
 </template>
