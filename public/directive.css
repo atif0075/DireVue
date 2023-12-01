@@ -158,7 +158,9 @@
 .loading-indicator {
   width: 100%;
 }
-
+.relative {
+  position: relative;
+}
 .black-overlay {
   position: absolute;
   top: 0;
