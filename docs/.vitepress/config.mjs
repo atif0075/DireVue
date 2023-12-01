@@ -35,7 +35,15 @@ export default defineConfig({
           { text: "Tooltip", link: "/general/v-tooltip" },
           { text: "Ripple", link: "/general/v-ripple" },
           { text: "Highlight", link: "/general/v-highlight" },
-          { text: "Image Viewer", link: "/general/v-image-viewer" },
+        ],
+      },
+      {
+        text: "Image",
+        collapsed: false,
+        items: [
+          { text: "Image View", link: "/image/v-image-view" },
+          // { text: "Image Zoom", link: "/image/v-image-zoom" },
+          // { text: "Image Preview", link: "/image/v-image-preview" },
         ],
       },
     ],

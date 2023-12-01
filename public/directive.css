@@ -29,11 +29,26 @@
   align-items: center;
   overflow-x: auto;
 }
-
+/* Image Container */
+.img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  height: calc(100% - 15rem);
+}
 .fullscreen-image {
   max-width: 100%;
   max-height: 100%;
-  border-radius: 20px;
+  min-width: 0;
+  border-radius: 1rem;
+}
+/* if screen is mobile */
+@media (max-width: 768px) {
+  .img-container {
+    height: auto;
+  }
 }
 
 .hidden {
@@ -44,25 +59,35 @@
 .next-button,
 .prev-button {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
+}
+.close-button:hover,
+.next-button:hover,
+.prev-button:hover {
+  scale: 0.9;
+}
+
+.next-button {
+  transform: rotate(180deg);
 }
 
 .close-button {
-  top: 30px;
+  top: 10px;
   right: 10px;
   background-color: #fde2e1;
   padding: 5px;
   color: #dc2625;
-  border-radius: 15px;
+  border-radius: 50%;
   transition: all 0.3s ease-in-out;
 }
 .closeIconSvg {
+  width: 26px;
+  height: 26px;
+}
+.nextIconSvg {
+  width: 26px;
+  height: 26px;
+}
+.prevIconSvg {
   width: 26px;
   height: 26px;
 }
@@ -76,7 +101,7 @@
   background-color: #f4f4f5;
   padding: 5px;
   color: #52525b;
-  border-radius: 15px;
+  border-radius: 50%;
   transition: all 0.3s ease-in-out;
 }
 .prev-button {
@@ -84,7 +109,7 @@
   background-color: #f4f4f5;
   padding: 5px;
   color: #52525b;
-  border-radius: 15px;
+  border-radius: 50%;
   transition: all 0.3s ease-in-out;
 }
 .thumbnail-bar {
@@ -93,7 +118,7 @@
   left: 0;
   width: 100%;
   padding: 5px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.507);
   display: flex;
   justify-content: center;
   align-items: center;

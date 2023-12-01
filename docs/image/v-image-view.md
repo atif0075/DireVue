@@ -26,3 +26,7 @@ The `v-image-viewer` takes the following modifiers:
 | ------------ | --------------------------------- |
 | `thumbnails` | The thumbnails will be displayed. |
 | `loop`       | The images will repeat in a loop. |
+
+## Source Code
+
+<<< ../../code/image/v-image-view.js

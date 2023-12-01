@@ -1,7 +1,5 @@
-// vImageView.js
-const closeIcon = `<svg class='closeIconSvg' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275z"/></svg>`;
-const nextIcon = `<svg class='nextIconSvg' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m9 5l6 7l-6 7"/></svg>`;
-const prevIcon = `<svg class='prevIconSvg' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m15 5l-6 7l6 7"/></svg>`;
+const closeIcon = `<svg class='closeIconSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275z"/></svg>`;
+const prevIcon = `<svg class='prevIconSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M14.71 6.71a.996.996 0 0 0-1.41 0L8.71 11.3a.996.996 0 0 0 0 1.41l4.59 4.59a.996.996 0 1 0 1.41-1.41L10.83 12l3.88-3.88c.39-.39.38-1.03 0-1.41z"/></svg>`;
 
 function createButton(className, icon) {
   const button = document.createElement("button");
@@ -19,6 +17,7 @@ export const vImageView = {
     el.addEventListener("click", () => {
       const currentIndex = { value: 0 };
       let fullscreenElement;
+      let imgContainer;
 
       createFullscreenElement();
 
@@ -26,12 +25,15 @@ export const vImageView = {
         fullscreenElement = document.createElement("div");
         fullscreenElement.classList.add("fullscreen");
 
-        createImages();
+        // Container for images
+        imgContainer = document.createElement("div");
+        imgContainer.classList.add("img-container");
+        fullscreenElement.appendChild(imgContainer);
+
+        createImage();
         if (thumbnails) {
           createThumbnailBar();
         }
-        createCloseButton();
-        createNavigationButtons();
 
         document.body.appendChild(fullscreenElement);
 
@@ -43,16 +45,14 @@ export const vImageView = {
         });
       }
 
-      function createImages() {
-        images.forEach((image, index) => {
-          const img = document.createElement("img");
-          img.src = image;
-          img.classList.add("fullscreen-image");
-          if (index !== 0) {
-            img.classList.add("hidden");
-          }
-          fullscreenElement.appendChild(img);
-        });
+      function createImage() {
+        const img = document.createElement("img");
+        img.src = images[currentIndex.value];
+        img.classList.add("fullscreen-image");
+        imgContainer.appendChild(img);
+
+        // Create navigation buttons inside the img-container
+        createNavigationButtons(img, currentIndex);
       }
 
       function createThumbnailBar() {
@@ -82,23 +82,23 @@ export const vImageView = {
         return thumbnail;
       }
 
-      function createCloseButton() {
+      function createNavigationButtons(img, currentIndex) {
+        // Create close button
         const closeButton = createButton("close-button", closeIcon);
         closeButton.addEventListener("click", () => {
           document.body.removeChild(fullscreenElement);
         });
-        fullscreenElement.appendChild(closeButton);
-      }
+        imgContainer.appendChild(closeButton);
 
-      function createNavigationButtons() {
-        const nextButton = createButton("next-button", nextIcon);
+        // Create navigation buttons
+        const nextButton = createButton("next-button", prevIcon);
         nextButton.addEventListener("click", () => {
           currentIndex.value = loop
             ? (currentIndex.value + 1) % images.length
             : Math.min(currentIndex.value + 1, images.length - 1);
           updateImageVisibility();
         });
-        fullscreenElement.appendChild(nextButton);
+        imgContainer.appendChild(nextButton);
 
         const prevButton = createButton("prev-button", prevIcon);
         prevButton.addEventListener("click", () => {
@@ -107,15 +107,12 @@ export const vImageView = {
             : Math.max(currentIndex.value - 1, 0);
           updateImageVisibility();
         });
-        fullscreenElement.appendChild(prevButton);
+        imgContainer.appendChild(prevButton);
       }
 
       function updateImageVisibility() {
-        fullscreenElement
-          .querySelectorAll(".fullscreen-image")
-          .forEach((img, index) => {
-            img.classList.toggle("hidden", index !== currentIndex.value);
-          });
+        imgContainer.querySelector(".fullscreen-image").src =
+          images[currentIndex.value];
       }
     });
   },

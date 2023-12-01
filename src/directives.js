@@ -6,7 +6,7 @@ import { vScrollToView } from "../code/general/v-scroll-to-view";
 import { vToolTip } from "../code/general/v-tooltip";
 import { vRipple } from "../code/general/v-ripple";
 import { vHighlight } from "../code/general/v-highlight";
-import { vImageView } from "../code/general/v-image-view";
+import { vImageView } from "../code/image/v-image-view";
 export default {
   install: (app) => {
     app
