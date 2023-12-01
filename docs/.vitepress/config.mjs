@@ -3,6 +3,9 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "DireVue",
   description: "Your Go-To Toolkit of Vue Directives",
+  sitemap: {
+    hostname: "https://direvue.vercel.app",
+  },
   head: [
     [
       "link",
