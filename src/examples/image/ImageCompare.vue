@@ -27,7 +27,7 @@ const compareData = [
       <h3 class="capitalize pb-2">{{ item.name }}</h3>
       <div
         class="rounded-2xl overflow-hidden"
-        v-image-slider="{
+        v-image-compare="{
           before: item.before,
           after: item.after,
           sliderValue: item.sliderValue,
