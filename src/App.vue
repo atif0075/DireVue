@@ -1,7 +1,7 @@
 <script setup>
-import ImageZoom from "./examples/image/ImageZoom.vue";
+import ImageFallback from "./examples/image/ImageFallback.vue";
 </script>
 
 <template>
-  <ImageZoom />
+  <ImageFallback />
 </template>
