@@ -1,7 +1,8 @@
 <script setup>
-import ImageFallback from "./examples/image/ImageFallback.vue";
+import ImageCompare from "./examples/image/ImageCompare.vue";
 </script>
 
 <template>
-  <ImageFallback />
+  <ImageCompare />
 </template>
+<style></style>

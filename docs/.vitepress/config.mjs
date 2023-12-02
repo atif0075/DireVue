@@ -110,6 +110,7 @@ export default defineConfig({
           { text: "Image Gallery", link: "/image/v-image-gallery" },
           { text: "Image Zoom", link: "/image/v-image-zoom" },
           { text: "Image Fallback", link: "/image/v-image-fallback" },
+          { text: "Image Compare", link: "/image/v-image-compare" },
         ],
       },
     ],

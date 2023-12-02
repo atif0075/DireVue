@@ -11,6 +11,7 @@ import { vImageFilter } from "../code/image/v-image-filter";
 import { vImageGallery } from "../code/image/v-image-gallery";
 import { vImageZoom } from "../code/image/v-image-zoom";
 import { VImageFallback } from "../code/image/v-image-fallback";
+import { vImageCompare } from "../code/image/v-image-compare";
 export default {
   install: (app) => {
     app
@@ -26,6 +27,7 @@ export default {
       .directive("image-filter", vImageFilter)
       .directive("image-gallery", vImageGallery)
       .directive("image-zoom", vImageZoom)
-      .directive("image-fallback", VImageFallback);
+      .directive("image-fallback", VImageFallback)
+      .directive("image-slider", vImageCompare);
   },
 };

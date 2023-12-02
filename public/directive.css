@@ -265,3 +265,29 @@
     transform: rotate(360deg);
   }
 }
+
+.slider {
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background-color: rgb(6, 128, 6);
+  backdrop-filter: blur(5px);
+  cursor: ew-resize;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  /* transition: left 0.1s; */
+}
+.handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  cursor: grab;
+  fill: none;
+  stroke: #333; /* Handle color */
+  stroke-width: 1;
+}
