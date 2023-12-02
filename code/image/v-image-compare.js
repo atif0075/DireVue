@@ -1,6 +1,5 @@
 export const vImageCompare = {
   mounted(el, binding) {
-    console.log(binding.value);
     const container = document.createElement("div");
     container.classList.add("image-compare-container");
 
@@ -15,7 +14,6 @@ export const vImageCompare = {
 
     const imgWrapperAfter = document.createElement("img");
     imgWrapperAfter.classList.add("img-wrapper", "after");
-    console.log(binding.value.customClassSuffix);
     binding.value.customClassSuffix
       ? imgWrapperAfter.classList.add(
           "after-" + binding.value.customClassSuffix

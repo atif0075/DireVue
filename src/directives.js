@@ -28,6 +28,6 @@ export default {
       .directive("image-gallery", vImageGallery)
       .directive("image-zoom", vImageZoom)
       .directive("image-fallback", VImageFallback)
-      .directive("image-slider", vImageCompare);
+      .directive("image-compare", vImageCompare);
   },
 };
