@@ -1,5 +1,5 @@
 <script setup> 
-import ConditionalFocus from "../../src/examples/general/ConditionalFocus.vue"
+import ConditionalFocus from "../../src/examples/input/ConditionalFocus.vue"
 </script>
 
 # Focus Directive
@@ -51,7 +51,7 @@ The `v-focus` directive can be used to conditionally focus an element. This is u
 </div>
 
 ::: details View Code
-<<< ../../src/examples/general/ConditionalFocus.vue
+<<< ../../src/examples/input/ConditionalFocus.vue
 :::
 
 ## Arguments
@@ -64,4 +64,4 @@ The `v-focus` directive does not accept any modifiers.
 
 ## Source Code
 
-<<< ../../code/general/v-focus.js
+<<< ../../code/input/v-focus.js

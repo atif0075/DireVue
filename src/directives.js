@@ -1,4 +1,4 @@
-import { vFocus } from "../code/general/v-focus";
+import { vFocus } from "../code/input/v-focus";
 import { vClickOutside } from "../code/general/v-click-outside";
 import { vCopy } from "../code/general/v-copy";
 import { vDisable } from "../code/general/v-disable";
