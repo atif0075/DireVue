@@ -120,8 +120,33 @@ export const vImageCompare = {
       }
     }, 10);
 
+    const touchSlide = (e) => {
+      const rect = container.getBoundingClientRect();
+      let position;
+
+      if (binding.value.direction === "vertical") {
+        // disabler horizontal scroll
+        e.preventDefault();
+        position = e.touches[0].clientY - rect.top;
+        position = Math.max(0, Math.min(position, rect.height));
+
+        const percentage = (position / rect.height) * 100;
+        setSliderPosition(percentage);
+      } else {
+        position = e.touches[0].pageX - rect.left;
+        position = Math.max(0, Math.min(position, rect.width));
+
+        const percentage = (position / rect.width) * 100;
+        setSliderPosition(percentage);
+      }
+    };
+
     slider.addEventListener("mousedown", startSlide);
-    document.addEventListener("mouseup", endSlide);
-    document.addEventListener("mousemove", slide);
+    el.addEventListener("mouseup", endSlide);
+    el.addEventListener("mousemove", slide);
+    // touch events
+    slider.addEventListener("touchstart", startSlide);
+    el.addEventListener("touchend", endSlide);
+    el.addEventListener("touchmove", touchSlide);
   },
 };
