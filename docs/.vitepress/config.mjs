@@ -67,6 +67,11 @@ export default defineConfig({
       },
     ],
   ],
+  vite: {
+    server: {
+      host: true,
+    },
+  },
   themeConfig: {
     logo: "https://gist.githubusercontent.com/atif0075/7a7cda43c49481bc7141d4e7224579f6/raw/6a1701b9a0bda46fcc7405c7b4a1b701aa3b6ee8/direvue.svg",
     // https://vitepress.dev/reference/default-theme-config
