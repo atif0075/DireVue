@@ -1,8 +1,8 @@
 <script setup>
-import ImageCompare from "./examples/image/ImageCompare.vue";
+import CustomMask from "./examples/input/CustomMask.vue";
 </script>
 
 <template>
-  <ImageCompare />
+  <CustomMask />
 </template>
 <style></style>
