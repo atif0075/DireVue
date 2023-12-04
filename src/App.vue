@@ -1,8 +1,8 @@
 <script setup>
-import CustomMask from "./examples/input/CustomMask.vue";
+import Avatar from "./examples/image/Avatar.vue"; 
 </script>
 
 <template>
-  <CustomMask />
+  <Avatar />
 </template>
 <style></style>
