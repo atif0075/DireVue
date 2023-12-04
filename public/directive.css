@@ -299,3 +299,7 @@
   stroke: #333; /* Handle color */
   stroke-width: 1;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
