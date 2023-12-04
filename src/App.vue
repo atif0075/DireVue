@@ -1,8 +1,8 @@
 <script setup>
-import Avatar from "./examples/image/Avatar.vue"; 
+import SVG from "./examples/image/SVG.vue";
 </script>
 
 <template>
-  <Avatar />
+  <SVG />
 </template>
 <style></style>
