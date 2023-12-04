@@ -16,11 +16,11 @@ The `v-image-compare` directive is used to compare two images by dragging a slid
 
 ## Arguments
 
-The `v-image-fallback` does not take any arguments.
+The `v-image-compare` does not take any arguments.
 
 ## Modifiers
 
-The `v-image-fallback` does not take any modifiers.
+The `v-image-compare` does not take any modifiers.
 
 ## Source Code
 

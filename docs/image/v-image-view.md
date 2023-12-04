@@ -4,7 +4,7 @@ import ImageViewer from "../../src/examples/image/ImageView.vue"
 
 # Image Viewer Directive
 
-The `v-image-viewer` component is used to display images with optional thumbnails.
+The `v-image-view` component is used to display images with optional thumbnails.
 
 ## Usage
 
@@ -16,11 +16,11 @@ The `v-image-viewer` component is used to display images with optional thumbnail
 
 ## Arguments
 
-The `v-image-viewer` directive does not accept any arguments.
+The `v-image-view` directive does not accept any arguments.
 
 ## Modifiers
 
-The `v-image-viewer` takes the following modifiers:
+The `v-image-view` takes the following modifiers:
 
 | Modifier     | Description                       |
 | ------------ | --------------------------------- |
