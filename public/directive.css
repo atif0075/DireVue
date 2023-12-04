@@ -303,3 +303,18 @@ img {
   max-width: 100%;
   height: auto;
 }
+.txt-indigo {
+  color: #3d63dc;
+}
+.txt-indigo :hover {
+  color: #41b883;
+}
+.txt-green {
+  color: #41b883;
+}
+.txt-green:hover {
+  color: #3d63dc;
+}
+.flip-x {
+  transform: scaleX(-1);
+}

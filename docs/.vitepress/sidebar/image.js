@@ -4,6 +4,7 @@ export const image = [
     collapsed: false,
     items: [
       { text: "Avatar", link: "/image/v-avatar" },
+      { text: "SVG", link: "/image/v-svg" },
       { text: "Image View", link: "/image/v-image-view" },
       { text: "Image Filter", link: "/image/v-image-filter" },
       { text: "Image Gallery", link: "/image/v-image-gallery" },
