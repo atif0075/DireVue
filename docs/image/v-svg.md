@@ -19,6 +19,10 @@ The `v-svg` directive allows you to dynamically import SVG files from your `asse
   </div>
 </template>
 ```
+<div
+ v-svg="'logo'"
+/>
+
 
 <SVG/>
 
