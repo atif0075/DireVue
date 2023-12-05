@@ -8,14 +8,18 @@ The `v-svg` directive allows you to dynamically import SVG files from your `asse
 
 ## Usage
 
+::: warning
+Your SVG files must be in your `public/assets` directory. The `v-svg` directive will not work if your SVG files are in your `src/assets` directory.
+:::
+
 ```vue
 <template>
   <div>
     <h1>SVG Directive</h1>
     <div v-svg="'logo'" />
-    <!-- Renders the logo.svg file from src/assets -->
+    <!-- Renders the logo.svg file from public/assets -->
     <div v-svg="'svg/logo'" />
-    <!-- Renders the logo.svg file from src/assets/svg -->
+    <!-- Renders the logo.svg file from public/assets/svg -->
   </div>
 </template>
 ```
