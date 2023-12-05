@@ -106,6 +106,6 @@ export const VSvg = {
     // Set the default options for this element
     setDefaultOptions(el);
     // Use the binding value as the SVG file path
-    loadSVGFile(`src/assets/${binding.value}.svg`, el);
+    loadSVGFile(`/assets/${binding.value}.svg`, el);
   },
 };

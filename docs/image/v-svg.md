@@ -19,10 +19,6 @@ The `v-svg` directive allows you to dynamically import SVG files from your `asse
   </div>
 </template>
 ```
-<div
- v-svg="'logo'"
-/>
-
 
 <SVG/>
 
@@ -34,13 +30,13 @@ The `v-svg` directive allows you to dynamically import SVG files from your `asse
 
 The `v-svg` directive takes a few customizations that can be used to modify the SVG before it is rendered.
 
-| Property        | Type      | Default | Description                            |
-| --------------- | --------- | ------- | -------------------------------------- |
-| `svgClass`      | `string`  | `''`    | Adds a class to the SVG element.       |
-| `svgStyle`      | `string`  | `''`    | Adds inline styles to the SVG element. |
-| `svgWidth`      | `string`  | `''`    | Sets the width of the SVG element.     |
-| `svgHeight`     | `string`  | `''`    | Sets the height of the SVG element.    |
-| `svgKeepParent` | `boolean` | `false` | Wrap the SVG in its parent component, otherwise it will replace its parent   |
+| Property        | Type      | Default | Description                                                                |
+| --------------- | --------- | ------- | -------------------------------------------------------------------------- |
+| `svgClass`      | `string`  | `''`    | Adds a class to the SVG element.                                           |
+| `svgStyle`      | `string`  | `''`    | Adds inline styles to the SVG element.                                     |
+| `svgWidth`      | `string`  | `''`    | Sets the width of the SVG element.                                         |
+| `svgHeight`     | `string`  | `''`    | Sets the height of the SVG element.                                        |
+| `svgKeepParent` | `boolean` | `false` | Wrap the SVG in its parent component, otherwise it will replace its parent |
 
 ## Arguments
 
