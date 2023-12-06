@@ -3,6 +3,7 @@ import { head } from "./config/head";
 import { general } from "./sidebar/general";
 import { input } from "./sidebar/input";
 import { image } from "./sidebar/image";
+import { style } from "./sidebar/style";
 export default defineConfig({
   title: "DireVue",
   description: "Your Go-To Toolkit of Vue Directives",
@@ -40,6 +41,7 @@ export default defineConfig({
       ...general,
       ...input,
       ...image,
+      ...style,
     ],
 
     socialLinks: [

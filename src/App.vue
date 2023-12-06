@@ -1,8 +1,8 @@
 <script setup>
-import SVG from "./examples/image/SVG.vue";
+import AccentBackground from "./examples/style/AccentBackground.vue";
 </script>
 
 <template>
-  <SVG />
+  <AccentBackground />
 </template>
 <style></style>
