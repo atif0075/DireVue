@@ -1,5 +1,5 @@
 <script setup> 
-import Ripple from "../../src/examples/general/Ripple.vue"
+import Ripple from "../../src/examples/style/Ripple.vue"
 </script>
 
 # Ripple Directive
@@ -23,7 +23,7 @@ The `v-ripple` directive is used to add ripple effect to any element.
 <Ripple/>
 
 ::: details View Code
-<<< ../../src/examples/general/Ripple.vue
+<<< ../../src/examples/style/Ripple.vue
 :::
 
 ## Arguments
@@ -41,4 +41,4 @@ The `v-ripple` directive accepts the following modifiers:
 
 ## Source Code
 
-<<< ../../code/general/v-ripple.js
+<<< ../../code/style/v-ripple.js
