@@ -1,7 +1,7 @@
 export const input = [
   {
     text: "Input",
-    collapsed: false,
+    collapsed: true,
     items: [
         { text: "Focus", link: "/input/v-focus" },
         { text: "Auto Resize", link: "/input/v-auto-resize" },

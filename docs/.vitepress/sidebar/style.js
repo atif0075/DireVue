@@ -1,7 +1,7 @@
 export const style = [
   {
     text: "Style",
-    collapsed: false,
+    collapsed: true,
     items: [
       {
         text: "Ripple",

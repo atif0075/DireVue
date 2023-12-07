@@ -1,7 +1,7 @@
 export const image = [
   {
     text: "Image",
-    collapsed: false,
+    collapsed: true,
     items: [
       { text: "Avatar", link: "/image/v-avatar" },
       { text: "SVG", link: "/image/v-svg" },
