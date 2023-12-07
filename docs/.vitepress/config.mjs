@@ -4,6 +4,7 @@ import { general } from "./sidebar/general";
 import { input } from "./sidebar/input";
 import { image } from "./sidebar/image";
 import { style } from "./sidebar/style";
+import { touch } from "./sidebar/touch";
 export default defineConfig({
   title: "DireVue",
   description: "Your Go-To Toolkit of Vue Directives",
@@ -42,6 +43,7 @@ export default defineConfig({
       ...input,
       ...image,
       ...style,
+      ...touch,
     ],
 
     socialLinks: [

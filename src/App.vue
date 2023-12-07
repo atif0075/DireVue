@@ -1,8 +1,8 @@
 <script setup>
-import AccentBackground from "./examples/style/AccentBackground.vue";
+import Swipe from "./examples/touch/Swipe.vue";
 </script>
 
 <template>
-  <AccentBackground />
+  <Swipe />
 </template>
 <style></style>
